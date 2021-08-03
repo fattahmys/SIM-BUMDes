@@ -39,7 +39,10 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/pembinaan/delete/{id}', [App\Http\Controllers\PembinaanController::class, 'delete'])->name('delete_pembinaan');
     Route::get('/pengajuanlayanan', [App\Http\Controllers\LayananController::class, 'kelola_pengajuanlayanan'])->name('kelola_pengajuanlayanan');
     Route::delete('/pengajuanlayanan/delete/{id}', [App\Http\Controllers\LayananController::class, 'delete'])->name('delete_pengajuanlayanan');
-    Route::get('/master/barang', [App\Http\Controllers\MasterController::class, 'barang'])->name('master_barang');
+    Route::get('/master_barang', [App\Http\Controllers\MasterController::class, 'index'])->name('master_barang');
+    Route::get('/master_barang/tambah', [App\Http\Controllers\MasterController::class, 'barang'])->name('tambah_master_barang');
+    Route::post('/master_barang/tambah', [App\Http\Controllers\MasterController::class, 'insert'])->name('tambahmasterbarang');
+    Route::delete('/master_barang/delete/{id}', [App\Http\Controllers\MasterController::class, 'delete'])->name('delete_master');
 
     
 });
