@@ -3,7 +3,7 @@
 @section('title', 'SIMBUMDes - Postiangan')
 
 <h1>All Post</h1>
-<a href="{{route('tambah_master_barang')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Master Barang</a>
+<a href="{{route('tambah_master_satuan')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Master Barang</a>
     <div class=" card card-body table-responsive">
       @if(session()->has('success'))
                 <div class="alert alert-success">
@@ -15,28 +15,26 @@
             <thead>
               <tr>
                   <th>NO</th>
-                  <th>Nama Barang</th>
-                  <th>Harga Beli</th>
-                  <th>Harga Jual</th>
+                  <th>Satuan</th>
+                  <th>keterangan</th>
                   <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               <?php $no=1; ?>
-              @foreach ($master_barang as $Master_barang =>$data)
+              @foreach ($master_satuan as $Master_satuan =>$data)
               
               <tr>
                     <td>{{$no++}}</td>
-                    <td>{{$data->nama_barang}}</td>
-                    <td>Rp. {{number_format($data->harga_beli, 0, ',', '.' )}}</td>
-                    <td>Rp. {{number_format($data->harga_jual, 0, ',', '.')}}</td>
+                    <td>{{$data->satuan}}</td>
+                    <td>{{$data->keterangan}}</td>
                     <td>
                         <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm">
-                          <form action="{{route('delete_master',$data->id)}}" id="delete{{$data->id}}" method="POST" >
+                          <form action="{{route('delete_master_satuan',$data->id)}}" id="delete{{$data->id}}" method="POST" >
                           @csrf
                           @method('delete')
                           </form> Delete </a>
-                        <a href="{{route('edit_master_barang',$data->id)}}" data-id="{{$data->id}}" class="btn btn-sm btn-primary">edit</a>
+                        <a href="{{route('edit_master_satuan',$data->id)}}" data-id="{{$data->id}}" class="btn btn-sm btn-primary">edit</a>
                         
                     </td>
                 </tr>

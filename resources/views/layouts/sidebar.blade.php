@@ -20,11 +20,11 @@
         <li><a><i class="fa fa-edit"></i>Master <span class="fa fa-chevron-down"></span></a>
           <ul class="nav child_menu">
             <li><a href="{{route('master_barang')}}">Barang</a></li>
-            <li><a href="{{route('post')}}">Satuan</a></li>
+            <li><a href="{{route('master_satuan')}}">Satuan</a></li>
           </ul>
         </li>
         
-        <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Pembelian</a></li>
+        <li><a href="{{route('pembelian')}}"><i class="fa fa-home"></i>Pembelian</a></li>
         <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Penjualan</a></li>
         <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Stok</a></li>
         <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Laporan</a></li>

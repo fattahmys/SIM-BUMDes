@@ -40,9 +40,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pengajuanlayanan', [App\Http\Controllers\LayananController::class, 'kelola_pengajuanlayanan'])->name('kelola_pengajuanlayanan');
     Route::delete('/pengajuanlayanan/delete/{id}', [App\Http\Controllers\LayananController::class, 'delete'])->name('delete_pengajuanlayanan');
     Route::get('/master_barang', [App\Http\Controllers\MasterController::class, 'index'])->name('master_barang');
-    Route::get('/master_barang/tambah', [App\Http\Controllers\MasterController::class, 'barang'])->name('tambah_master_barang');
+    Route::get('/tambah_master_barang', [App\Http\Controllers\MasterController::class, 'barang'])->name('tambah_master_barang');
     Route::post('/master_barang/tambah', [App\Http\Controllers\MasterController::class, 'insert'])->name('tambahmasterbarang');
     Route::delete('/master_barang/delete/{id}', [App\Http\Controllers\MasterController::class, 'delete'])->name('delete_master');
+    Route::get('/master_barang/{id}/edit', [App\Http\Controllers\MasterController::class, 'edit'])->name('edit_master_barang');
+    Route::patch('/master_barang/{id}', [App\Http\Controllers\MasterController::class, 'update'])->name('update_master_barang');
+    Route::get('/master_satuan', [App\Http\Controllers\MastersatuanController::class, 'index'])->name('master_satuan');
+    Route::get('/tambah_master_satuan', [App\Http\Controllers\MastersatuanController::class, 'satuan'])->name('tambah_master_satuan');
+    Route::post('/master_satuan/tambah', [App\Http\Controllers\MastersatuanController::class, 'insert'])->name('tambahmastersatuan');
+    Route::delete('/master_satuan/delete/{id}', [App\Http\Controllers\MastersatuanController::class, 'delete'])->name('delete_master_satuan');
+    Route::get('/master_satuan/{id}/edit', [App\Http\Controllers\MastersatuanController::class, 'edit'])->name('edit_master_satuan');
+    Route::patch('/master_satuan/{id}', [App\Http\Controllers\MastersatuanController::class, 'update'])->name('update_master_satuan');
+    Route::get('/pembelian', [App\Http\Controllers\PembelianController::class, 'index'])->name('pembelian');
 
     
 });

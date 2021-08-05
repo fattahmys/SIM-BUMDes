@@ -18,4 +18,9 @@ class MasterbarangModel extends Model
         return DB::table('master_barang')->get();
         
     }
+    
+    public function edit($id){
+        return DB::table('master_barang')->where('id', $id)->first();
+
+    }
 }

@@ -48,5 +48,27 @@ class MasterController extends Controller
         DB::table('master_barang')->where('id',$id)->delete();
         return back()->with('success', 'Master barang berhasil dihapus.');;
     }
+
+    public function edit($id){
+        
+        $data = [
+            'master_barang' => $this->MasterbarangModel->allData(),
+            'master_barang' => $this->MasterbarangModel->edit($id),
+            
+        ];
+       
+        return view('pages.inventaris.edit_master_barang', $data);
+    }
+
+    public function update(Request $request, $id){
+        DB::table('master_barang')->where('id', $id)->update([
+            'nama_barang' => $request->nama_barang,
+            'harga_beli' => $request->harga_beli,
+            'harga_jual' => $request->harga_jual,
+        ]);
+        return redirect('master_barang')->with('success', 'Master barang berhasil diupdate');
+        // dd($request->all());
+    }
+
     
 }
