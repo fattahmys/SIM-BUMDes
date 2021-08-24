@@ -52,6 +52,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/master_satuan/{id}/edit', [App\Http\Controllers\MastersatuanController::class, 'edit'])->name('edit_master_satuan');
     Route::patch('/master_satuan/{id}', [App\Http\Controllers\MastersatuanController::class, 'update'])->name('update_master_satuan');
     Route::get('/pembelian', [App\Http\Controllers\PembelianController::class, 'index'])->name('pembelian');
+    Route::post('/tambah_pembelian', [App\Http\Controllers\PembelianController::class, 'insert'])->name('insert_pembelian');
 
     
 });

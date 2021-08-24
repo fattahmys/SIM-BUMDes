@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MasterbarangModel;
+use App\Models\MastersatuanModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -11,21 +12,28 @@ class MasterController extends Controller
     public function __construct()
     {
         $this->MasterbarangModel = new MasterbarangModel();
+        $this->MastersatuanModel = new MastersatuanModel();
     }
     public function index(){
         $data = [
             'master_barang' => $this->MasterbarangModel->allData(),
+            
         ];
         return view('pages.inventaris.master_barang', $data);
     }
     public function barang(){
-        return view('pages.inventaris.tambah_master_barang');
+        $data = [
+            'master_satuan' => $this->MastersatuanModel->allData(),
+
+        ];
+        return view('pages.inventaris.tambah_master_barang', $data);
     }
     public function insert(){
         $data = [
             'nama_barang'=>request()->nama_barang,
             'harga_beli'=>request()->harga_beli,
             'harga_jual'=>request()->harga_jual,
+            'satuan'=>request()->satuan,
             ];
         Request()->validate([
             'nama_barang' => 'required|unique:master_barang,nama_barang|max:255',

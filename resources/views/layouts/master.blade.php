@@ -141,6 +141,7 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{asset('assets/build/js/custom.min.js') }}"></script>
+    <script src="{{asset('assets/build/js/rupiah.js') }}"></script>
     
     @stack('custom-script')
 	

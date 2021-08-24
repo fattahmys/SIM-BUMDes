@@ -29,6 +29,18 @@
                 @error('harga_jual') {{$message}}@enderror
                 </div>
             </div>
+
+            <div class="mb-3">
+                <label class="form-label">Satuan</label>
+                <select class="form-control" name="satuan" id="">
+                    @foreach ($master_satuan as $Master_satuan =>$data)
+                    <option value="{{$data->satuan}}">{{$data->satuan}}</option>
+                    @endforeach
+                </select>
+                <div class="invalid-feedback">
+                @error('harga_jual') {{$message}}@enderror
+                </div>
+            </div>
             
            <button type="submit" class="btn btn-primary mt-3">Submit</button>
        </form>

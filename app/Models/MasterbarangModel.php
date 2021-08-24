@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class MasterbarangModel extends Model
 {
+    protected $table = "master_barang";
+ 
+    public function pembelian()
+    {
+    	return $this->hasMany(PembelianModel::class);
+    }
+
     public function insert($data)
     {
         DB::table('master_barang')->insert($data);
