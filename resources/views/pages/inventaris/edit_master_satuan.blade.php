@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-@section('title', 'SIMBUMDes - Post Kategori')
+@section('title', 'SIMBUMDes - Edit Master Satuan')
  
 <h1>Tambah Kategori</h1>
     <div class=" card card-body">

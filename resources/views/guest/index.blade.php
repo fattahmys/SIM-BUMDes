@@ -46,15 +46,14 @@
 
   <!-- ======= Header ======= -->
   @include('guest.header')
-  @yield('header')
   <!-- End Header -->
 
 
   <main id="main">
 @yield('content')
 
-  </main><!-- End #main -->
-
+</main><!-- End #main -->
+@include('guest.footer')
  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

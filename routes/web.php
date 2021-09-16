@@ -53,6 +53,19 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/master_satuan/{id}', [App\Http\Controllers\MastersatuanController::class, 'update'])->name('update_master_satuan');
     Route::get('/pembelian', [App\Http\Controllers\PembelianController::class, 'index'])->name('pembelian');
     Route::post('/tambah_pembelian', [App\Http\Controllers\PembelianController::class, 'insert'])->name('insert_pembelian');
+    Route::get('/stok', [App\Http\Controllers\StokController::class, 'index'])->name('stok');
+    Route::get('/penjualan', [App\Http\Controllers\PenjualanController::class, 'index'])->name('penjualan');
+    Route::post('/tambah_penjualan', [App\Http\Controllers\PenjualanController::class, 'insert'])->name('insert_penjualan');
+    Route::get('/laporan-pembelian', [App\Http\Controllers\LaporanController::class, 'index'])->name('laporan_pembelian');
+    Route::get('/laporan-penjualan', [App\Http\Controllers\LaporanController::class, 'penjualan'])->name('laporan_penjualan');
+    Route::get('/laporan', [App\Http\Controllers\LaporanController::class, 'laporan'])->name('laporan');
+    Route::get('/debet', [App\Http\Controllers\DebetController::class, 'index'])->name('debet');
+    Route::post('/insert_debet', [App\Http\Controllers\DebetController::class, 'insert'])->name('insert_debet');
+    Route::get('/laporan-cetak', [App\Http\Controllers\LaporanController::class, 'cetak_laporan'])->name('cetak_laporan');
+    Route::get('/laporan-pembelian-cetak', [App\Http\Controllers\LaporanController::class, 'cetak_pembelian'])->name('cetak_pembelian');
+    Route::get('/laporan-penjualan-cetak', [App\Http\Controllers\LaporanController::class, 'cetak_penjualan'])->name('cetak_penjualan');
+
+
 
     
 });

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-@section('title', 'SIMBUMDes - Newpost')
+@section('title', 'SIMBUMDes - Post')
 
 <div class="container">
     <div class="row bg-white p-0">

@@ -1,10 +1,10 @@
 @extends('guest.index')
-@section('title', 'Bumdes-Pembinaan')
+@section('title', 'Bumdes - Pembinaan')
 @section('content')
 <div class="mt-5">
 <br>
     <div class="container mt-5">
-        <div class="card">
+        <div class="card mb-5">
             <div class="card-header">
                 Daftar program pembinaan petani
             </div>

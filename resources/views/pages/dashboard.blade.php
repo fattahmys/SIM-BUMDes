@@ -1,6 +1,6 @@
 @extends('layouts.master')
-@section('title', 'SIMBUMDes - Post Kategori')
+@section('title', 'SIMBUMDes - Dashboard')
 @section('content')
-<h1>Dashboard</h1>
+<h3>Dashboard</h3>
 
 @endsection

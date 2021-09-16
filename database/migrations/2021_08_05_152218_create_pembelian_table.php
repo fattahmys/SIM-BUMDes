@@ -21,9 +21,9 @@ class CreatePembelianTable extends Migration
             // $table->integer('harga_jual');
             $table->string('jumlah');
             // $table->string('satuan');
-            $table->string('untung_per1');
-            $table->string('untung_tot');
-            $table->string('kredit');
+            $table->integer('untung_per1')->default(0);
+            $table->integer('untung_tot')->default(0);
+            $table->integer('kredit')->default(0);
             $table->timestamps();
         });
     }

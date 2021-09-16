@@ -6,12 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	{{-- <link rel="icon" href="{{asset('assets/image/favicon.ico')}}" type="image/ico" /> --}}
 
     <title>@yield('title')</title>
-    <script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-@stack('custom-style')
+    @stack('custom-style')
     <!-- Bootstrap -->
     <link href="{{asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
@@ -61,7 +59,7 @@
            @include('layouts.sidebar')
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
+              {{-- <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
               <a data-toggle="tooltip" data-placement="top" title="FullScreen">
@@ -69,7 +67,7 @@
               </a>
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
+              </a> --}}
               <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{route('logout')}}"
               onclick="
               event.preventDefault();
@@ -100,7 +98,7 @@
         <!-- /footer content -->
       </div>
     </div>
-
+    
     <!-- jQuery -->
     <script src="{{asset('assets/vendors/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
@@ -138,12 +136,15 @@
     <!-- bootstrap-daterangepicker -->
     <script src="{{asset('assets/vendors/moment/min/moment.min.js') }}"></script>
     <script src="{{asset('assets/vendors/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
-
+    
     <!-- Custom Theme Scripts -->
     <script src="{{asset('assets/build/js/custom.min.js') }}"></script>
     <script src="{{asset('assets/build/js/rupiah.js') }}"></script>
     
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     @stack('custom-script')
-	
+    
+    
   </body>
-</html>
+  </html>
+  

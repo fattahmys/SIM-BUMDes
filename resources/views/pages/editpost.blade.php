@@ -73,6 +73,8 @@ $(".swal-confirm").click(function(e) {
 })
   
 </script>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
 <script>
     ClassicEditor
         .create( document.querySelector( '#content' ) )
@@ -81,5 +83,6 @@ $(".swal-confirm").click(function(e) {
         } );
     // CKEDITOR.replace( 'content' );
   </script>
+
     
 @endpush

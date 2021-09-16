@@ -48,6 +48,7 @@
     
 @endsection
 @push('custom-script')
+<script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
 <script>
   ClassicEditor
       .create( document.querySelector( '#content' ) )

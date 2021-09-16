@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class MastersatuanModel extends Model
 {
+    protected $table = "master_satuan";
     public function allData()
     {
         return DB::table('master_satuan')->get();

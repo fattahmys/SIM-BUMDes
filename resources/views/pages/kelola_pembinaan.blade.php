@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-@section('title', 'SIMBUMDes - Postiangan')
+@section('title', 'SIMBUMDes - Pembinaan')
 
 <h1>All Post</h1>
 <a href="{{route('newpost')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Artikel</a>

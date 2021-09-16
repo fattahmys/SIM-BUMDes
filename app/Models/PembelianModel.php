@@ -9,13 +9,14 @@ use Illuminate\Support\Facades\DB;
 class PembelianModel extends Model
 {
     protected $table = "pembelian";
+    // protected $guarded = ['id'];
  
     public function master_barang()
     {
     	return $this->belongsTo(MasterbarangModel::class);
     }
 
-    public function listbarang()
+    public function allData()
     {
         return DB::table('master_barang')->get();
         

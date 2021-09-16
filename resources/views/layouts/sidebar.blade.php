@@ -24,10 +24,17 @@
           </ul>
         </li>
         
+        <li><a href="{{route('debet')}}"><i class="fa fa-home"></i>Debet/Saldo</a></li>
+        <li><a href="{{route('stok')}}"><i class="fa fa-home"></i>Stok</a></li>
         <li><a href="{{route('pembelian')}}"><i class="fa fa-home"></i>Pembelian</a></li>
-        <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Penjualan</a></li>
-        <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Stok</a></li>
-        <li><a href="{{route('kelola_pembinaan')}}"><i class="fa fa-home"></i>Laporan</a></li>
+        <li><a href="{{route('penjualan')}}"><i class="fa fa-home"></i>Penjualan</a></li>
+        <li><a><i class="fa fa-edit"></i>Laporan <span class="fa fa-chevron-down"></span></a>
+          <ul class="nav child_menu">
+            <li><a href="{{route('laporan_pembelian')}}">Laporan Pembelian</a></li>
+            <li><a href="{{route('laporan_penjualan')}}">Laporan Penjualan</a></li>
+            <li><a href="{{route('laporan')}}">Laporan</a></li>
+          </ul>
+        </li>
         </div>
       
   </div>

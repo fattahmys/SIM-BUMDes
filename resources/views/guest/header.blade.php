@@ -15,14 +15,13 @@
             <ul>
              
               </li>
-              <li><a href="#">Sarana Produksi</a></li>
+              {{-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sarana Produksi</a></li> --}}
               <li><a href="{{route('pembinaan')}}">Daftar Pembinaan petani</a></li>
               <li><a href="{{route('layanan')}}">Pengajuan Layanan</a></li>
             </ul>
           <li><a class="nav-link scrollto" href="{{route('index')}}#berita">Berita</a></li>
           <li><a class="nav-link scrollto" href="{{route('index')}}#team">Direksi</a></li>
           </li>
-          <li><a class="nav-link scrollto" href="{{route('index')}}#contact">Contact</a></li>
           <li><a class="nav-link scrollto" href="{{route('login')}}"><span class="border-start border-3"> Login Admin</span></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -30,3 +29,5 @@
 
     </div>
   </header>
+
+  

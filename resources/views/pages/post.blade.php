@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-@section('title', 'SIMBUMDes - Postiangan')
+@section('title', 'SIMBUMDes - Kelola Postingan')
 
-<h1>All Post</h1>
+<h3>All Post</h3>
 <a href="{{route('newpost')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Artikel</a>
     <div class=" card card-body table-responsive">
         <table class="table table-sm">

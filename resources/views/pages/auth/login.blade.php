@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SIM-BUMDes </title>
+    <title>SIM-BUMDes - Login</title>
 
     <!-- Bootstrap -->
     <link href="{{asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -41,7 +41,6 @@
               </div>
               <div class="d-grid gap-2 d-md-block">
                 <button class="btn btn-primary" type="submit">Login</button>
-                <button class="btn btn-primary" type="button">Button</button>
               </div>
               <div>
                 {{-- <a type="submit" class="btn btn-default submit">Log in</a>
@@ -59,8 +58,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> SIM-BUMDes</h1>
-                  <p>©2021 Badan Usaha Milik Desa. <br> Desa Baru, Kecamatan Luyo, Kab. Polewali Mandar. <br> Developed by <a href="https://www.instagram.com/fattahmys/">Abd. Fattah</a></p>
+                  <h1>SIM-BUMDes</h1>
+                  <p>©{{date('Y')}} Badan Usaha Milik Desa. <br> Desa Baru, Kecamatan Luyo, Kab. Polewali Mandar. <br> Developed by <a href="https://www.instagram.com/fattahmys/">Fattah Mys</a></p>
                 </div>
               </div>
             </form>
