@@ -9,7 +9,7 @@
     </style>
 
 <h1>Edit Post</h1>
-<a href="{{route('newpost')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Artikel</a>
+
     <div class=" card card-body table-responsive">
       <form action="{{route('update_post',$post->id)}}" method="post">
         @csrf

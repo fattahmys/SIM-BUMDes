@@ -16,6 +16,7 @@
              
               </li>
               {{-- <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sarana Produksi</a></li> --}}
+              <li><a href="{{route('layanan_stok')}}">Cek Stok Saprodi</a></li>
               <li><a href="{{route('pembinaan')}}">Daftar Pembinaan petani</a></li>
               <li><a href="{{route('layanan')}}">Pengajuan Layanan</a></li>
             </ul>

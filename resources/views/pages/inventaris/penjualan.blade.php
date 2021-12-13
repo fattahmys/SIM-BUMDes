@@ -2,7 +2,7 @@
 @section('content')
 @section('title', 'SIMBUMDes - Penjualan')
  
-<h3>Penjualan</h3>
+<h3>Barang Keluar</h3>
     <div class=" card card-body">
         @if(session()->has('message'))
                 <div class="alert alert-danger">
@@ -14,7 +14,7 @@
         <div class="row g-2">
             <div class="col-md mb-3">
                 <label class="form-label">nama Barang</label>
-                <select class="form-control @error('nama_barang') is-invalid @enderror" name="nama_barang" id="nama_barang" onchange="isi_otomatis()" aria-label="Default select example">
+                <select value="{{old('nama_barang')}}"  class="form-control @error('nama_barang') is-invalid @enderror" name="nama_barang" id="nama_barang" onchange="isi_otomatis()" aria-label="Default select example">
                     <option selected disabled>-Open this select menu-</option>
                     @foreach ($master_barang as $Master_barang =>$data)
                     <option value="{{$data->id}}">{{$data->nama_barang}}</option>
@@ -29,13 +29,13 @@
 
             <div class="col-md mb-3">
                 <label class="form-label">Tanggal Pembelian</label>
-                <input name="tgl" type="date" class="form-control @error('tgl') is-invalid @enderror" id="tgl" aria-describedby="emailHelp" placeholder="">
+                <input value="{{old('tgl')}}"  name="tgl" type="date" class="form-control @error('tgl') is-invalid @enderror" id="tgl" aria-describedby="emailHelp" placeholder="">
                 <div class="invalid-feedback">
                 @error('tgl') {{$message}}@enderror
                 </div>
             </div>
         </div>
-        <div class="row g-2">
+        {{-- <div class="row g-2">
             <div class="col-md mb-3">
                 <label class="form-label">Harga Beli</label>
                 <input name="harga_beli" type="text" value="" class="form-control @error('harga_beli') is-invalid @enderror" id="harga_beli" aria-describedby="emailHelp" onkeyup="convertToRupiah(this);" placeholder="" disabled>
@@ -51,7 +51,7 @@
                 @error('harga_beli') {{$message}}@enderror
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row g-2">
             <div class="col-md mb-3">
                 <label class="form-label">Jumlah</label>
@@ -61,7 +61,7 @@
                 </div>
             </div>
         
-            <div class="col-md mb-3">
+            {{-- <div class="col-md mb-3">
                 <label class="form-label">Satuan</label>
                 <select name="satuan" disabled class="form-control @error('satuan') is-invalid @enderror" id="exampleFormControlSelect1">
                     <option selected disabled>-Open this select menu-</option>
@@ -73,7 +73,7 @@
                 <div class="invalid-feedback">
                 @error('satuan') {{$message}}@enderror
                 </div>
-            </div>    
+            </div>     --}}
 
             
         </div>
@@ -84,7 +84,7 @@
     </div>
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <h3>Daftar Penjualan</h3>
+            <h3>Daftar Barang Keluar</h3>
         </div>
     </div>
     <div class=" card card-body table-responsive">

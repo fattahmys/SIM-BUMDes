@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title text-center">Pembinaan Petani</h5>
-                <p class="card-text text-center text-info">Pelajari Lebih Lanjut disini</p>
+                <p class="card-text text-center text-success">Pelajari Lebih Lanjut disini</p>
                 @if(session()->has('success'))
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
@@ -61,7 +61,7 @@
 
                       <div class="row">
                           <div class="col-12 d-flex justify-content-center">
-                              <button type="submit" class="btn btn-primary ">Submit</button>
+                              <button type="submit" class="btn btn-success ">Submit</button>
                           </div>
                       </div>
                 </form>

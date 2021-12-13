@@ -71,6 +71,6 @@ class PenjualanController extends Controller
             ]);
         }
     // Alert::success('Success Title', 'success Message');
-    return redirect('penjualan')->with('success', 'Master barang berhasil ditambahkan.');
+    return redirect('penjualan')->with('success', 'Penjualan berhasil ditambahkan.');
     }
 }

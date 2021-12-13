@@ -141,7 +141,7 @@ Sebagai Badan Usaha, pada prinsipnya kami akan mengambil peluang usaha yang seki
             <div class="col-md-6">
               <div class="icon-box">
                 <i class="bi bi-briefcase"></i>
-                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sarana Produksi</a></h4>
+                <h4><a href="{{route('layanan_stok')}}">Sarana Produksi</a></h4>
                 <p>Bumdes Harapan Baru menyediakan sarana produksi berupa pestisida untuk dijual kepada masyarakat.</p>
               </div>
             </div>
@@ -231,7 +231,7 @@ Sebagai Badan Usaha, pada prinsipnya kami akan mengambil peluang usaha yang seki
               <div class="member d-flex align-items-start">
                 <div class="pic"><img src="assets/guest/img/team/team-1.png" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>Muh. Yunus</h4>
+                  <h6><b>Muh. Yunus</b></h6>
                   <span>Ketua</span>
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -247,8 +247,8 @@ Sebagai Badan Usaha, pada prinsipnya kami akan mengambil peluang usaha yang seki
               <div class="member d-flex align-items-start">
                 <div class="pic"><img src="assets/guest/img/team/team-1.png" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>Megawati</h4>
-                  <span>Sekretaris</span>
+                  <h6><b>Rindwan Andika</b></h6>
+                  <span>Ketua Unit</span>
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -263,7 +263,7 @@ Sebagai Badan Usaha, pada prinsipnya kami akan mengambil peluang usaha yang seki
               <div class="member d-flex align-items-start">
                 <div class="pic"><img src="assets/guest/img/team/team-1.png" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>Joko widodo</h4>
+                  <h6><b>Nur Atika</b></h6>
                   <span>Bendahara</span>
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -280,49 +280,6 @@ Sebagai Badan Usaha, pada prinsipnya kami akan mengambil peluang usaha yang seki
         </div>
       </section><!-- End Team Section -->
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Stok Sarana Produksi</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-bordered">
-            {{-- <caption>{{ $post->links() }}</caption> --}}
-            <thead>
-              <tr align="center">
-                  <th>NO</th>
-                  <th>Nama Barang</th>
-                  <th>Jumlah Stok</th>
-                  <th>Satuan</th>
-                  <th>Harga Jual</th>
-                  
-              </tr>
-            </thead>
-            <tbody>
-              <?php $no=1; ?>
-              @foreach ($master_barang as $barang =>$data)
-              
-              <tr>
-                    <td align="center">{{$no++}}</td>
-                    <td>{{$data->nama_barang}}</td>
-                    <td align="center">{{$data->stok}}</td>
-                    <td align="center">{{$data->satuan}}</td>
-                    <td>Rp. {{number_format($data->harga_jual, 0, ',', ',')}}</td>
-                    
-                </tr>
-                @endforeach
-            </tbody>
-          </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
   @endsection
 
 

@@ -2,7 +2,7 @@
 @section('content')
 @section('title', 'SIMBUMDes - Kelola Postingan')
 
-<h3>All Post</h3>
+<h3>Kelola Postingan</h3>
 <a href="{{route('newpost')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Artikel</a>
     <div class=" card card-body table-responsive">
         <table class="table table-sm">
@@ -26,13 +26,13 @@
                     <td>{{$data->kategori}}</td>
                     <td width="1px">{!!$content!!} <a href="post/{{$data->id}}"><br> Read More...</a></td>
                     <td>
-                        <a href="{{route('edit_post', $data->id)}}"  class="btn btn-sm btn-success">Edit</a>
-                        <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm">
+                        <a href="{{route('edit_post', $data->id)}}"  class="btn btn-sm btn-success" title="Edit"><i class="fa fa-edit"></i></a>
+                        <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm" title="Delete">
                           <form action="{{route('delete_post',$data->id)}}" id="delete{{$data->id}}" method="POST" >
                           @csrf
                           @method('delete')
-                          </form> Delete </a>
-                        <a href="post/{{$data->id}}" class="btn btn-sm btn-primary">Baca Artikel</a>
+                          </form> <i class="fa fa-trash"></i> </a>
+                        <a href="post/{{$data->id}}" class="btn btn-sm btn-primary" title="Baca"><i class="fa fa-newspaper-o"></i></a>
                     </td>
                 </tr>
                 @endforeach

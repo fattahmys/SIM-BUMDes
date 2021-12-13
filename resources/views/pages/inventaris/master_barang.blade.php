@@ -2,7 +2,7 @@
 @section('content')
 @section('title', 'SIMBUMDes - Master Barang')
 
-<h1>All Post</h1>
+<h3>Master Barang</h3>
 <a href="{{route('tambah_master_barang')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Master Barang</a>
     <div class=" card card-body table-responsive">
       @if(session()->has('success'))
@@ -18,7 +18,7 @@
                   <th>Nama Barang</th>
                   <th>Harga Beli</th>
                   <th>Harga Jual</th>
-                  <th>Actions</th>
+                  {{-- <th>Actions</th> --}}
               </tr>
             </thead>
             <tbody>
@@ -30,7 +30,7 @@
                     <td>{{$data->nama_barang}}</td>
                     <td>Rp. {{number_format($data->harga_beli, 0, ',', '.' )}}</td>
                     <td>Rp. {{number_format($data->harga_jual, 0, ',', '.')}}</td>
-                    <td>
+                    {{-- <td>
                         <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm">
                           <form action="{{route('delete_master',$data->id)}}" id="delete{{$data->id}}" method="POST" >
                           @csrf
@@ -38,7 +38,7 @@
                           </form> Delete </a>
                         <a href="{{route('edit_master_barang',$data->id)}}" data-id="{{$data->id}}" class="btn btn-sm btn-primary">edit</a>
                         
-                    </td>
+                    </td> --}}
                 </tr>
                 @endforeach
             </tbody>

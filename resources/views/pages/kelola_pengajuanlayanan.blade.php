@@ -2,8 +2,8 @@
 @section('content')
 @section('title', 'SIMBUMDes - Pengajuan Layanan')
 
-<h1>All Post</h1>
-<a href="{{route('newpost')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Artikel</a>
+<h3>Pengajuan Layanan</h3>
+{{-- <a href="{{route('newpost')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Artikel</a> --}}
     <div class=" card card-body table-responsive">
         <table class="table table-sm">
             {{-- <caption>{{ $post->links() }}</caption> --}}
@@ -26,11 +26,11 @@
                     <td>{{$data->nohp}}</td>
                     <td>{{$data->isipesan}}</td>
                     <td>
-                        <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm">
+                        <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm" title="Delete">
                           <form action="{{route('delete_pengajuanlayanan',$data->id)}}" id="delete{{$data->id}}" method="POST" >
                           @csrf
                           @method('delete')
-                          </form> Delete </a>
+                          </form> <i class="fa fa-trash"></i>  </a>
                         
                     </td>
                 </tr>

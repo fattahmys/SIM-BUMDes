@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title text-center">Pengajuan Layanan</h5>
-                <p class="card-text text-center text-info"> <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#layanan">
+                <p class="card-text text-center text-success"> <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#layanan">
                     Pelajari lebih lanjut disini 
                   </button></p>
                   
@@ -64,7 +64,7 @@
                       </div>
                       <div class="row">
                           <div class="col-12 d-flex justify-content-center">
-                              <button type="submit" class="btn btn-primary">Submit</button>
+                              <button type="submit" class="btn btn-success">Submit</button>
                           </div>
                       </div>
                 </form>
@@ -87,7 +87,7 @@
         mengajukan berbagai layanan kepada BUMDes Harapan Baru.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

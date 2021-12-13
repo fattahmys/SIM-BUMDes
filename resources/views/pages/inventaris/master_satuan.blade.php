@@ -2,8 +2,7 @@
 @section('content')
 @section('title', 'SIMBUMDes - Master Satuan')
 
-<h1>All Post</h1>
-<a href="{{route('tambah_master_satuan')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Master Barang</a>
+<h3>Master Satuan</h3><a href="{{route('tambah_master_satuan')}}" method="post" class="btn btn-primary mb-3 mt-2">Tambah Master Satuan</a>
     <div class=" card card-body table-responsive">
       @if(session()->has('success'))
                 <div class="alert alert-success">
@@ -29,12 +28,12 @@
                     <td>{{$data->satuan}}</td>
                     <td>{{$data->keterangan}}</td>
                     <td>
-                        <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm">
+                        <a href="#" data-id="{{$data->id}}" class="btn btn-sm btn-danger swal-confirm" title="Delete">
                           <form action="{{route('delete_master_satuan',$data->id)}}" id="delete{{$data->id}}" method="POST" >
                           @csrf
                           @method('delete')
-                          </form> Delete </a>
-                        <a href="{{route('edit_master_satuan',$data->id)}}" data-id="{{$data->id}}" class="btn btn-sm btn-primary">edit</a>
+                          </form> <i class="fa fa-trash"></i>  </a>
+                        <a href="{{route('edit_master_satuan',$data->id)}}" data-id="{{$data->id}}" class="btn btn-sm btn-primary" title="Edit"><i class="fa fa-edit"></i> </a>
                         
                     </td>
                 </tr>

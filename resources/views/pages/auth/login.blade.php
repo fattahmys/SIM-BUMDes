@@ -34,12 +34,16 @@
                 @csrf
               <h1>Login Form</h1>
               <div>
-                <input type="email" name="email" class="form-control" placeholder="email" required="" />
+                <input type="email" name="email" value="{{old('email')}}" class="form-control @error('email') is-invalid @enderror" placeholder="email" required="" />
               </div>
               <div>
-                <input type="password" name="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" name="password" value="{{old('password')}}" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required="" />
               </div>
+              @error('email')<div class="alert alert-danger" role="alert"> {{$message}}</div>@enderror
+              @error('password')<div class="alert alert-danger" role="alert"> {{$message}}</div>@enderror
               <div class="d-grid gap-2 d-md-block">
+                <div class="invalid-feedback">
+                </div>
                 <button class="btn btn-primary" type="submit">Login</button>
               </div>
               <div>

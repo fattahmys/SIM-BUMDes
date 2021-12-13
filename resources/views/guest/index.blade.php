@@ -8,8 +8,8 @@
   <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-@stack('custom-style')
+  {{-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> --}}
+  @stack('custom-style')
   <!-- Favicons -->
   <link href="{{asset('assets/guest/img/favicon.png')}}" rel="icon">
   <link href="{{asset('assets/guest/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
@@ -62,7 +62,7 @@
   <script src="{{asset('assets/guest/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('assets/guest/vendor/glightbox/js/glightbox.min.js')}}"></script>
   <script src="{{asset('assets/guest/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('assets/guest/vendor/php-email-form/validate.js')}}"></script>
+  {{-- <script src="{{asset('assets/guest/vendor/php-email-form/validate.js')}}"></script> --}}
   <script src="{{asset('assets/guest/vendor/purecounter/purecounter.js')}}"></script>
   <script src="{{asset('assets/guest/vendor/swiper/swiper-bundle.min.js')}}"></script>
   

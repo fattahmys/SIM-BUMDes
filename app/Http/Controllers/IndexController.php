@@ -16,7 +16,7 @@ class IndexController extends Controller
     public function index(){
         $data = [
             'debet'=>DB::table('debet')->get(),
-            'master_barang'=>DB::table('master_barang')->get(),
+            'master_barang'=>DB::table('master_barang')->orderBy('id', 'desc')->Paginate(2),
             'pembelian'=>DB::table('pembelian')->get(),
             'post' => $this->PostModel->allData1(),
         ];

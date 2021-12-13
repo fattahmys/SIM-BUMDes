@@ -28,8 +28,8 @@ class PostController extends Controller
     }
     public function insert(Request $request){
         Request()->validate([
-            'title' => 'required|unique:post,title|max:255',
-            'content' => 'required|unique:post,content',
+            'title' => 'required|max:255',
+            'content' => 'required',
             'gambar' => 'required|mimes:jpeg,png,jpg,gif,svg',
             
         ],
@@ -48,6 +48,7 @@ class PostController extends Controller
                 'gambar'=>$imgName,
         
             ];
+            // dd($data);
             // dd($request->gambar);
        
 

@@ -3,7 +3,7 @@
 @section('title', 'SIMBUMDes - Stok')
  
 <h3>Stok Produk</h3>
-    <div class=" card card-body">
+    <div class="card card-body table-responsive">
         <table class="table table-bordered">
             {{-- <caption>{{ $post->links() }}</caption> --}}
             <thead>

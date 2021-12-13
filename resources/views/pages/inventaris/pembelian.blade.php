@@ -2,14 +2,14 @@
 @section('content')
 @section('title', 'SIMBUMDes - Pembelian')
  
-<h3>Pembelian</h3>
+<h3>Barang Masuk</h3>
     <div class=" card card-body">
       <form action="{{route('insert_pembelian')}}" method="POST">
         @csrf
         <div class="row g-2">
             <div class="col-md mb-3">
                 <label class="form-label">nama Barang</label>
-                <select class="form-control @error('nama_barang') is-invalid @enderror" name="nama_barang" id="nama_barang" onchange="isi_otomatis()" aria-label="Default select example">
+                <select class="form-control @error('nama_barang') is-invalid @enderror" name="nama_barang" id="nama_barang" value="{{old('nama_barang')}}" aria-label="Default select example">
                     <option selected disabled>-Open this select menu-</option>
                     @foreach ($master_barang as $Master_barang =>$data)
                     <option value="{{$data->id}}">{{$data->nama_barang}}</option>
@@ -24,7 +24,7 @@
 
             <div class="col-md mb-3">
                 <label class="form-label">Tanggal Pembelian</label>
-                <input name="tgl" type="date" class="form-control @error('tgl') is-invalid @enderror" id="tgl" aria-describedby="emailHelp" placeholder="">
+                <input name="tgl" value="{{old('tgl')}}" type="date" class="form-control @error('tgl') is-invalid @enderror" id="tgl" aria-describedby="emailHelp" placeholder="">
                 <div class="invalid-feedback">
                 @error('tgl') {{$message}}@enderror
                 </div>
@@ -32,45 +32,14 @@
         </div>
         <div class="row g-2">
             <div class="col-md mb-3">
-                <label class="form-label">Harga Beli</label>
-                <input name="harga_beli" type="text" value="" class="form-control @error('harga_beli') is-invalid @enderror" id="harga_beli" aria-describedby="emailHelp" onkeyup="convertToRupiah(this);" placeholder="" disabled>
-                <div class="invalid-feedback">
-                @error('nama_barang') {{$message}}@enderror
-                </div>
-            </div>
-
-            <div class="col-md mb-3">
-                <label class="form-label">Harga Jual</label>
-                <input name="harga_jual" type="timepicker" class="form-control @error('harga_beli') is-invalid @enderror" id="harga_jual" aria-describedby="emailHelp" onkeyup="convertToRupiah(this);" placeholder="" disabled>
-                <div class="invalid-feedback">
-                @error('harga_beli') {{$message}}@enderror
-                </div>
-            </div>
-        </div>
-        <div class="row g-2">
-            <div class="col-md mb-3">
                 <label class="form-label">Jumlah</label>
-                <input name="jumlah" type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" aria-describedby="emailHelp" placeholder="">
+                <input name="jumlah" type="text" value="{{old('jumlah')}}" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" aria-describedby="emailHelp" placeholder="">
                 <div class="invalid-feedback">
                 @error('jumlah') {{$message}}@enderror
                 </div>
             </div>
         
-            <div class="col-md mb-3">
-                <label class="form-label">Satuan</label>
-                <select name="satuan" disabled class="form-control @error('satuan') is-invalid @enderror" id="exampleFormControlSelect1">
-                    <option selected disabled>-Open this select menu-</option>
-                    @foreach ($master_satuan as $Master_satuan =>$data)
-                    <option value="{{$data->satuan}}">{{$data->keterangan}}</option>
-                    @endforeach
-                    
-                  </select>
-                <div class="invalid-feedback">
-                @error('satuan') {{$message}}@enderror
-                </div>
-            </div>    
-
-            
+        
         </div>
 
            <button type="submit" class="btn btn-primary mt-3">Submit</button>
@@ -79,7 +48,7 @@
     </div>
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <h3>Daftar Pembelian</h3>
+            <h3>Daftar Barang Masuk</h3>
         </div>
     </div>
     <div class="card card-body table-responsive">
@@ -89,7 +58,6 @@
                 </div>
                   @endif
         <table class="table table-bordered table-sm">
-            {{-- <caption>{{ $post->links() }}</caption> --}}
             <thead>
               <tr>
                   <th>NO</th>

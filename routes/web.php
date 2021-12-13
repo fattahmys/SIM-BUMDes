@@ -18,12 +18,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('pages.auth.login');
 // });
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('index');
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'ShowLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/post', [App\Http\Controllers\PostController::class, 'index'])->name('post');
     Route::get('/newpost', [App\Http\Controllers\PostController::class, 'newpost'])->name('newpost');
     Route::post('/post', [App\Http\Controllers\PostController::class, 'insert'])->name('insert_newpost');
@@ -32,6 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/post/{id}', [App\Http\Controllers\PostController::class, 'update'])->name('update_post');
     Route::get('/galery', [App\Http\Controllers\PostController::class, 'galery'])->name('galery');
     Route::get('/kategoripost', [App\Http\Controllers\KategoripostController::class, 'index'])->name('postkategori');
+    Route::delete('/kategoripost/delete/{id}', [App\Http\Controllers\KategoripostController::class, 'delete'])->name('delete_kategoripost');
+    Route::get('/kategoripost/{id}/edit', [App\Http\Controllers\KategoripostController::class, 'edit'])->name('edit_kategoripost');
     Route::get('/tambahpostktr', [App\Http\Controllers\KategoripostController::class, 'tambahpostktr'])->name('tambahpostktr');
     Route::post('/kategoripost', [App\Http\Controllers\KategoripostController::class, 'insert'])->name('insert_kategoripost');
     Route::post('/kategoripost', [App\Http\Controllers\KategoripostController::class, 'insert'])->name('insert_kategoripost');
@@ -74,6 +76,7 @@ Route::get('layanan/pembinaan', [App\Http\Controllers\PembinaanController::class
 Route::post('layanan/pembinaan', [App\Http\Controllers\PembinaanController::class, 'insert'])->name('insert_pembinaan');
 Route::get('layanan/pengajuanlayanan', [App\Http\Controllers\LayananController::class, 'index'])->name('layanan');
 Route::post('layanan/pengajuanlayanan', [App\Http\Controllers\LayananController::class, 'insert'])->name('insert_pengajuanlayanan');
+Route::get('layanan/stok', [App\Http\Controllers\StokController::class, 'stok'])->name('layanan_stok');
 // Route::get('/register', function () {
 //     return view('pages.auth.register');
 // });

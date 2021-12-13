@@ -10,7 +10,7 @@
                 </div>
                   @endif
                   <div>
-                    <a href="{{route('cetak_pembelian')}}"><button class="btn btn-success mb-3">Export Excel</button></a>
+                    <a href="{{route('cetak_pembelian')}}"><button class="btn btn-success mb-3"><i class="fa fa-share"></i> Export Excel</button></a>
       
                 </div>                 
 <table class="table table-bordered table-sm">

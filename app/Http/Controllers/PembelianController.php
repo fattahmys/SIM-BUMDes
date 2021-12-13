@@ -67,7 +67,7 @@ class PembelianController extends Controller
         
                                           
     // Alert::success('Success Title', 'success Message');
-    return redirect('pembelian')->with('success', 'Master barang berhasil ditambahkan.');
+    return redirect('pembelian')->with('success', 'Pembelian berhasil ditambahkan.');
     }
 
     
